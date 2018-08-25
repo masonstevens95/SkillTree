@@ -1,0 +1,21 @@
+<resources>
+
+    <!--Layouts-->
+    <string name="app_name">SkillTree</string>
+    <string name="log_title_label">Skill</string>
+    <string name="log_notes_label">Notes</string>
+    <string name="log_notes_text">Notes</string>
+    <string name="log_spinner_prompt">Select a Skill...</string>
+    <string name="add_skill">Add a New Skill</string>
+
+
+    <!--Dialogs-->
+    <string name="date_picker_title">Date of Log:</string>
+
+    <string name="time_picker_title">Amount of Time Trained:</string>
+
+    <!--Menus-->
+    <string name="new_log">New Log</string>
+    <string name="back_to_main">Back to Home</string>
+
+</resources>
