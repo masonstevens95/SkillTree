@@ -28,6 +28,11 @@
             android:parentActivityName=".LogListActivity">
         </activity>
 
+        <activity
+            android:name=".SkillActivity"
+            android:parentActivityName=".SkillListActivity">
+        </activity>
+
 
     </application>
 

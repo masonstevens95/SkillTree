@@ -1,6 +1,7 @@
 package galacticgames.android.skilltree;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -48,7 +49,12 @@ public class SkillListFragment extends Fragment {
         mAddSkillButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Add Skill Clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "Add Skill Clicked", Toast.LENGTH_SHORT).show();
+                Skill skill = new Skill();
+                SkillData.get(getActivity()).addSkill(skill);
+                Intent intent = SkillActivity
+                        .newIntent(getActivity(), skill.getId());
+                startActivity(intent);
             }
         });
 

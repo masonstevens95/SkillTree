@@ -8,6 +8,9 @@
     <string name="log_spinner_prompt">Select a Skill...</string>
     <string name="add_skill">Add a New Skill</string>
 
+    <string name="skill_title_label">Skill:</string>
+    <string name="skill_text">Enter Skill Name Here (Placeholder)</string>
+
 
     <!--Dialogs-->
     <string name="date_picker_title">Date of Log:</string>
