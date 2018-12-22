@@ -21,4 +21,9 @@
     <string name="new_log">New Log</string>
     <string name="back_to_main">Back to Home</string>
 
+    <string name="error_network_call_failed">network call failed</string>
+    <string name="questions_list_screen_title">LATEST QUESTIONS</string>
+    <string name="question_details_screen_title">QUESTION DETAILS</string>
+    <string name="drawer_menu_item_questions_list">Questions list</string>
+
 </resources>

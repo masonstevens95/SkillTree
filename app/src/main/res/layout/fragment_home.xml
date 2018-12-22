@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <Button
+        android:id="@+id/point"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintCircle="@+id/point"
+        app:layout_constraintCircleAngle="300"
+        app:layout_constraintCircleRadius="125dp"
+        app:srcCompat="@mipmap/ic_launcher"/>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintCircle="@+id/point"
+        app:layout_constraintCircleAngle="330"
+        app:layout_constraintCircleRadius="125dp"
+        app:srcCompat="@mipmap/ic_launcher"/>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintCircle="@+id/point"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="125dp"
+        app:srcCompat="@mipmap/ic_launcher"/>
+
+    <ImageButton
+        android:id="@+id/imageButto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintCircle="@+id/point"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="125dp"
+        app:srcCompat="@mipmap/ic_launcher"/>
+
+</android.support.constraint.ConstraintLayout>
