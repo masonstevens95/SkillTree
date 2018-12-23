@@ -17,4 +17,8 @@ public class ToastsHelper {
     public void showUseCaseError() {
         Toast.makeText(mContext, R.string.error_network_call_failed, Toast.LENGTH_SHORT).show();
     }
+
+    public void showTemporaryNavigation(String string) {
+        Toast.makeText(mContext, "Temporary substitute for navigation to: " + string, Toast.LENGTH_SHORT).show();
+    }
 }

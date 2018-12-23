@@ -11,6 +11,7 @@ import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
 import galacticgames.android.skilltree.screens.common.controllers.BackPressDispatcher;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
+import galacticgames.android.skilltree.screens.homescreen.HomeScreenController;
 
 public class ControllerCompositionRoot {
 
@@ -77,5 +78,12 @@ public class ControllerCompositionRoot {
 
     public BackPressDispatcher getBackPressDispatcher() {
         return (BackPressDispatcher) getActivity();
+    }
+
+    public HomeScreenController getHomeScreenController() {
+        return new HomeScreenController(
+                getScreensNavigator(),
+                getToastsHelper()
+        );
     }
 }

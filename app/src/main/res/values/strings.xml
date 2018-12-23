@@ -26,4 +26,6 @@
     <string name="question_details_screen_title">QUESTION DETAILS</string>
     <string name="drawer_menu_item_questions_list">Questions list</string>
 
+    <string name="home_screen_title">"SkillTree</string>
+
 </resources>

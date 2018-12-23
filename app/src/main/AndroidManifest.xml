@@ -3,6 +3,7 @@
           package="galacticgames.android.skilltree">
 
     <application
+        android:name=".common.CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,30 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity
+            android:name=".screens.common.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".legacy.skill.SkillListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".legacy.log.LogListActivity">
-        </activity>
-
-        <activity
-            android:name=".legacy.log.LogActivity"
-            android:parentActivityName=".legacy.log.LogListActivity">
-        </activity>
-
-        <activity
-            android:name=".legacy.skill.SkillActivity"
-            android:parentActivityName=".legacy.skill.SkillListActivity">
-        </activity>
-
-
     </application>
 
 </manifest>

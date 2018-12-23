@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/element_toolbar"/>
+
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -33,7 +35,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline"/>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/skillsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -43,7 +45,7 @@
         app:srcCompat="@mipmap/ic_launcher"/>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -53,7 +55,7 @@
         app:srcCompat="@mipmap/ic_launcher"/>
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/friendsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -63,7 +65,7 @@
         app:srcCompat="@mipmap/ic_launcher"/>
 
     <ImageButton
-        android:id="@+id/imageButto4"
+        android:id="@+id/profileButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

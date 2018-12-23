@@ -2,6 +2,7 @@ package galacticgames.android.skilltree.common.screensnavigator;
 
 
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
+import galacticgames.android.skilltree.screens.homescreen.HomeScreenFragment;
 
 public class ScreensNavigator {
 
@@ -19,5 +20,9 @@ public class ScreensNavigator {
 
     public void navigateUp() {
         mFragmentFrameHelper.navigateUp();
+    }
+
+    public void toHome() {
+        mFragmentFrameHelper.replaceFragmentAndClearBackstack(HomeScreenFragment.newInstance());
     }
 }
