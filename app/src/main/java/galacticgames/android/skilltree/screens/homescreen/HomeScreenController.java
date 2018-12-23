@@ -46,7 +46,7 @@ public class HomeScreenController implements HomeScreenViewMvc.Listener, HomePre
 
         switch (button.getId()){
             case R.id.skillsButton:
-                mToastsHelper.showTemporaryNavigation("skillsButton");
+                mScreensNavigator.toUserSkillList();
                 break;
             case R.id.searchButton:
                 mToastsHelper.showTemporaryNavigation("searchButton");

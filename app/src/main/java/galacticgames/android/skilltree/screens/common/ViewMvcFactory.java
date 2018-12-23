@@ -1,14 +1,16 @@
 package galacticgames.android.skilltree.screens.common;
 
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
 import galacticgames.android.skilltree.screens.homescreen.HomeScreenViewMvc;
 import galacticgames.android.skilltree.screens.homescreen.HomeScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvc;
+import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.userskills.userskillsitem.UserSkillsListItemViewMvc;
+import galacticgames.android.skilltree.screens.userskills.userskillsitem.UserSkillsListItemViewMvcImpl;
 
 public class ViewMvcFactory {
 
@@ -24,5 +26,13 @@ public class ViewMvcFactory {
 
     public ToolbarViewMvc getToolbarViewMvc(@Nullable ViewGroup parent) {
         return new ToolbarViewMvc(mLayoutInflater, parent);
+    }
+
+    public UserSkillsScreenViewMvc getUsersSkillViewMvc(@Nullable ViewGroup parent){
+        return new UserSkillsScreenViewMvcImpl(mLayoutInflater, parent, this);
+    }
+
+    public UserSkillsListItemViewMvc getUsersSkillListItemViewMvc(@Nullable ViewGroup parent){
+        return new UserSkillsListItemViewMvcImpl(mLayoutInflater, parent);
     }
 }

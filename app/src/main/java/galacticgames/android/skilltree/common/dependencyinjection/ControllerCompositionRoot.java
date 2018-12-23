@@ -9,9 +9,11 @@ import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
 import galacticgames.android.skilltree.screens.common.controllers.BackPressDispatcher;
+import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
 import galacticgames.android.skilltree.screens.homescreen.HomeScreenController;
+import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenController;
 
 public class ControllerCompositionRoot {
 
@@ -80,10 +82,24 @@ public class ControllerCompositionRoot {
         return (BackPressDispatcher) getActivity();
     }
 
+    private HomePressDispatcher getHomePressDispatcher() {
+        return (HomePressDispatcher) getActivity();
+    }
+
     public HomeScreenController getHomeScreenController() {
         return new HomeScreenController(
                 getScreensNavigator(),
                 getToastsHelper()
         );
     }
+
+    public UserSkillsScreenController getUserSkillsScreenController() {
+        return new UserSkillsScreenController(
+                getScreensNavigator(),
+                getToastsHelper(),
+                getHomePressDispatcher()
+        );
+    }
+
+
 }

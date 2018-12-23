@@ -15,9 +15,12 @@ import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.screens.common.controllers.BackPressDispatcher;
 import galacticgames.android.skilltree.screens.common.controllers.BackPressedListener;
 import galacticgames.android.skilltree.screens.common.controllers.BaseActivity;
+import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
+import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
 
-public class MainActivity extends BaseActivity implements BackPressDispatcher, FragmentFrameWrapper {
+public class MainActivity extends BaseActivity implements BackPressDispatcher,
+        HomePressDispatcher, FragmentFrameWrapper {
 
     public static void startClearTop(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
@@ -26,6 +29,7 @@ public class MainActivity extends BaseActivity implements BackPressDispatcher, F
     }
 
     private final Set<BackPressedListener> mBackPressedListeners = new HashSet<>();
+    private final Set<HomePressedListener> mHomePressedListeners = new HashSet<>();
     private ScreensNavigator mScreensNavigator;
 
 
@@ -67,4 +71,27 @@ public class MainActivity extends BaseActivity implements BackPressDispatcher, F
     public FrameLayout getFragmentFrame() {
         return findViewById(R.id.frame_content);
     }
+
+    @Override
+    public void registerListener(HomePressedListener listener) {
+        mHomePressedListeners.add(listener);
+    }
+
+    @Override
+    public void unregisterListener(HomePressedListener listener) {
+        mHomePressedListeners.remove(listener);
+    }
+
+    //TODO: see if I can use this to pop all fragments off the stack.
+//    public void onHomePressed() {
+//        boolean isBackPressConsumedByAnyListener = false;
+//        for (BackPressedListener listener : mBackPressedListeners) {
+//            if (listener.onBackPressed()) {
+//                isBackPressConsumedByAnyListener = true;
+//            }
+//        }
+//        if (!isBackPressConsumedByAnyListener) {
+//            super.onBackPressed();
+//        }
+//    }
 }

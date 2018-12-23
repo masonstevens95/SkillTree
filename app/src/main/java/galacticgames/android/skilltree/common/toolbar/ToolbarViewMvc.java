@@ -51,7 +51,7 @@ public class ToolbarViewMvc extends BaseViewMvc {
             }
         });
         mBtnHome = findViewById(R.id.btn_home);
-        mBtnBack.setOnClickListener(new View.OnClickListener() {
+        mBtnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mHomeClickListener.onHomeClicked();

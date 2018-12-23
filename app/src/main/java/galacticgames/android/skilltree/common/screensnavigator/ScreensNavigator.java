@@ -3,6 +3,8 @@ package galacticgames.android.skilltree.common.screensnavigator;
 
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.homescreen.HomeScreenFragment;
+import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenFragment;
+import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvc;
 
 public class ScreensNavigator {
 
@@ -25,4 +27,13 @@ public class ScreensNavigator {
     public void toHome() {
         mFragmentFrameHelper.replaceFragmentAndClearBackstack(HomeScreenFragment.newInstance());
     }
+
+    public void toUserSkillList() {
+        mFragmentFrameHelper.replaceFragment(UserSkillsScreenFragment.newInstance());
+    }
+
+    //TODO: enable this when layout is ready
+//    public void toSkillDetails(String id) {
+//        mFragmentFrameHelper.replaceFragment(UserSkillsDetailsScreenFragment.newInstance(id));
+//    }
 }
