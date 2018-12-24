@@ -2,6 +2,7 @@ package galacticgames.android.skilltree.skills;
 
 import java.util.UUID;
 
+
 public class Skill {
 
     //TODO: maybe make an abstraction where Skills is from server side and UserSkill inherits and can take log time values/ achievements
