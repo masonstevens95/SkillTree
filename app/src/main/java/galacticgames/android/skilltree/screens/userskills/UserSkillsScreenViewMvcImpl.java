@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ProgressBar;
 
 import java.util.List;
@@ -28,6 +29,7 @@ public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkill
     private final RecyclerView mRecyclerSkills;
     private final UserSkillsRecyclerAdapter mAdapter;
     private final ProgressBar mProgressBar;
+    private final Button mNewSkillButton;
 
     //endregion
 
@@ -45,6 +47,16 @@ public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkill
 
         mProgressBar = findViewById(R.id.progress);
 
+        mNewSkillButton = findViewById(R.id.btn_add_skill);
+        mNewSkillButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (Listener listener : getListeners()){
+                    listener.onNewSkillClicked();
+                }
+            }
+        });
+
         mToolbar = findViewById(R.id.toolbar);
         mToolbarViewMvc = viewMvcFactory.getToolbarViewMvc(mToolbar);
         initToolbar();
@@ -56,7 +68,6 @@ public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkill
         mToolbarViewMvc.enableHomeButtonAndListen(new ToolbarViewMvc.HomeClickListener(){
             @Override
             public void onHomeClicked() {
-                //TODO: implement going home... Navhelper?
                 for (Listener listener : getListeners()){
                     listener.onHomeClicked();
                 }

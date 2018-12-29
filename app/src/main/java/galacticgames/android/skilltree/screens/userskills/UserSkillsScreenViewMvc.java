@@ -13,6 +13,8 @@ public interface UserSkillsScreenViewMvc extends ObservableViewMvc<UserSkillsScr
         void onSkillClicked(Skill skill);
 
         void onSkillListClicked();
+
+        void onNewSkillClicked();
     }
 
     void bindSkills(List<Skill> skills);

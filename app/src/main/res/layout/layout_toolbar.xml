@@ -50,4 +50,21 @@
         android:textColor="@color/white"
         android:textSize="20sp"/>
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_save"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
 </RelativeLayout>

@@ -21,4 +21,8 @@ public class ToastsHelper {
     public void showTemporaryNavigation(String string) {
         Toast.makeText(mContext, "Temporary substitute for navigation to: " + string, Toast.LENGTH_SHORT).show();
     }
+
+    public void showEmptyEditTextError() {
+        Toast.makeText(mContext, "You can't save a skill that doesn't have a name!", Toast.LENGTH_SHORT).show();
+    }
 }

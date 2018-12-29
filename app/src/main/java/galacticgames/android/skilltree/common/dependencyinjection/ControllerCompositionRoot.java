@@ -1,5 +1,6 @@
 package galacticgames.android.skilltree.common.dependencyinjection;
 
+import android.app.Application;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -13,7 +14,9 @@ import galacticgames.android.skilltree.screens.common.controllers.HomePressDispa
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
 import galacticgames.android.skilltree.screens.homescreen.HomeScreenController;
+import galacticgames.android.skilltree.screens.tempnewskillscreen.NewSkillScreenController;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenController;
+import galacticgames.android.skilltree.skills.SkillRepository;
 
 public class ControllerCompositionRoot {
 
@@ -101,5 +104,13 @@ public class ControllerCompositionRoot {
         );
     }
 
-
+    //must be async -- skill repository must run on separate thread
+    public NewSkillScreenController getNewSkillScreenController() {
+        return new NewSkillScreenController(
+            getScreensNavigator(),
+            getToastsHelper(),
+            getHomePressDispatcher(),
+            getContext()
+        );
+    }
 }

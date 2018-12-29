@@ -15,9 +15,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import galacticgames.android.skilltree.R;
-import galacticgames.android.skilltree.legacy.skill.Skill;
-import galacticgames.android.skilltree.legacy.skill.SkillActivity;
-import galacticgames.android.skilltree.legacy.skill.SkillData;
 
 public class SkillListFragment extends Fragment {
 
@@ -49,7 +46,7 @@ public class SkillListFragment extends Fragment {
         mSkillListRecyclerView = (RecyclerView) view.findViewById(R.id.skill_recycler_view);
         mSkillListRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mAddSkillButton = (Button) view.findViewById(R.id.add_skill_button);
+        mAddSkillButton = (Button) view.findViewById(R.id.btn_add_skill);
         mAddSkillButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

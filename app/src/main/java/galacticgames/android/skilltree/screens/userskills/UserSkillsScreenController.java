@@ -45,8 +45,15 @@ public class UserSkillsScreenController implements UserSkillsScreenViewMvc.Liste
 
     @Override
     public void onSkillClicked(Skill skill) {
-//TODO:        mScreensNavigator.toSkillDetails(skill.getId());
+        //TODO: mScreensNavigator.toSkillDetails(skill.getId());
         mToastsHelper.showTemporaryNavigation("SkillDetails, " + skill.getTitle());
+    }
+
+    @Override
+    public void onNewSkillClicked() {
+        //TODO: mScreensNavigator.toNewSkill();
+        //mToastsHelper.showTemporaryNavigation("New Skill" );
+        mScreensNavigator.toNewSkillScreen();
     }
 
     @Override

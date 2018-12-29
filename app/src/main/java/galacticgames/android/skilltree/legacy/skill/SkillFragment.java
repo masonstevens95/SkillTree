@@ -49,7 +49,7 @@ public class SkillFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View v = inflater.inflate(R.layout.fragment_entry_skill, container, false);
+        View v = inflater.inflate(R.layout.layout_new_skill, container, false);
 
 
         //******************Title EditText********************//

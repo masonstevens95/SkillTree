@@ -24,14 +24,20 @@ public class ToolbarViewMvc extends BaseViewMvc {
         void onHomeClicked();
     }
 
+    public interface SaveClickListener {
+        void onSaveClicked();
+    }
+
     private final TextView mTxtTitle;
     private final ImageButton mBtnBack;
     private final ImageButton mBtnHamburger;
     private final ImageButton mBtnHome;
+    private final ImageButton mBtnSave;
 
     private NavigateUpClickListener mNavigateUpClickListener;
     private HamburgerClickListener mHamburgerClickListener;
     private HomeClickListener mHomeClickListener;
+    private SaveClickListener mSaveClickListener;
 
     public ToolbarViewMvc(LayoutInflater inflater, ViewGroup parent) {
         setRootView(inflater.inflate(R.layout.layout_toolbar, parent, false));
@@ -55,6 +61,13 @@ public class ToolbarViewMvc extends BaseViewMvc {
             @Override
             public void onClick(View view) {
                 mHomeClickListener.onHomeClicked();
+            }
+        });
+        mBtnSave = findViewById(R.id.btn_save);
+        mBtnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSaveClickListener.onSaveClicked();
             }
         });
     }
@@ -85,6 +98,11 @@ public class ToolbarViewMvc extends BaseViewMvc {
         }
         mHomeClickListener = homeClickListener;
         mBtnHome.setVisibility(View.VISIBLE);
+    }
+
+    public void enableSaveButtonAndListen(SaveClickListener saveClickListener) {
+        mSaveClickListener = saveClickListener;
+        mBtnSave.setVisibility(View.VISIBLE);
     }
 
 }

@@ -27,5 +27,6 @@
     <string name="drawer_menu_item_questions_list">Questions list</string>
 
     <string name="home_screen_title">"SkillTree</string>
+    <string name="new_skill_screen_title">Create a New Skill (Placeholder)</string>
 
 </resources>
