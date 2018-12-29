@@ -76,7 +76,7 @@ public class LogListFragment extends Fragment{
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
         super.onCreateOptionsMenu(menu,inflater);
-        inflater.inflate(R.menu.fragment_list_log, menu);
+        inflater.inflate(R.menu.legacy_fragment_list_log, menu);
     }
 
     //make the menu actually do something

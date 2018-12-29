@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--TODO: change achievements, -->
+    <item
+        android:id="@+id/navigation_achievements"
+        android:icon="@drawable/ic_bottomnav_achievements"
+        android:title="Achievements"/>
+
+    <item
+        android:id="@+id/navigation_graph"
+        android:icon="@drawable/ic_bottomnav_graph"
+        android:title="Graph"/>
+
+    <item
+        android:id="@+id/navigation_log"
+        android:icon="@drawable/ic_bottomnav_log"
+        android:title="Log"/>
+
+</menu>
