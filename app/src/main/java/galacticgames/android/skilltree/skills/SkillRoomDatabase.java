@@ -51,9 +51,7 @@ public abstract class SkillRoomDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(final Void... params) {
             mDao.deleteAll();
-            Skill skill = new Skill("aaaaaa", "Climbing");
-            mDao.insert(skill);
-            skill = new Skill("aaaaab", "Snowboarding");
+            Skill skill = new Skill("aaaaaa", "Test Skill");
             mDao.insert(skill);
             return null;
         }

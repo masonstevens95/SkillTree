@@ -40,7 +40,6 @@ public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkill
         setRootView(inflater.inflate(R.layout.layout_user_skill_list, parent, false));
 
         mRecyclerSkills = findViewById(R.id.skill_recycler_view);
-        //TODO: Check if linearlayout causes crash here?
         mRecyclerSkills.setLayoutManager(new LinearLayoutManager(getContext()));
         mAdapter = new UserSkillsRecyclerAdapter(this, viewMvcFactory);
         mRecyclerSkills.setAdapter(mAdapter);

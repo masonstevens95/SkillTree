@@ -60,7 +60,7 @@ public class NewSkillScreenViewMvcImpl extends BaseObservableViewMvc<NewSkillScr
            public void onSaveClicked() {
                //TODO: implement save function?
                for (Listener listener : getListeners()){
-                   listener.onSaveClicked(titleEditText.toString());
+                   listener.onSaveClicked(titleEditText.getText().toString());
                }
            }
         });

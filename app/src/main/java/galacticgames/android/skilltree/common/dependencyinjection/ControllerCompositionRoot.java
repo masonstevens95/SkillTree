@@ -16,6 +16,7 @@ import galacticgames.android.skilltree.screens.common.fragmentframehelper.Fragme
 import galacticgames.android.skilltree.screens.homescreen.HomeScreenController;
 import galacticgames.android.skilltree.screens.tempnewskillscreen.NewSkillScreenController;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenController;
+import galacticgames.android.skilltree.skills.FetchUserSkillsFromLocalMemory;
 import galacticgames.android.skilltree.skills.SkillRepository;
 
 public class ControllerCompositionRoot {
@@ -96,8 +97,13 @@ public class ControllerCompositionRoot {
         );
     }
 
+    public FetchUserSkillsFromLocalMemory getFetchUserSkillsFromLocalMemory() {
+        return new FetchUserSkillsFromLocalMemory(getContext());
+    }
+
     public UserSkillsScreenController getUserSkillsScreenController() {
         return new UserSkillsScreenController(
+                getFetchUserSkillsFromLocalMemory(),
                 getScreensNavigator(),
                 getToastsHelper(),
                 getHomePressDispatcher()

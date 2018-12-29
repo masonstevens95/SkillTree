@@ -1,6 +1,8 @@
 package galacticgames.android.skilltree.skills;
 
 import android.app.Application;
+import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +21,9 @@ public class FetchUserSkillsFromLocalMemory extends BaseObservable<FetchUserSkil
     private List<Skill> mAllSkills;
 
     //TODO: populate constructor... check if application is what we need
-    public FetchUserSkillsFromLocalMemory(Application application){
+    public FetchUserSkillsFromLocalMemory(Context context){
         //need this?
-        mRepository = new SkillRepository(application);
+        mRepository = new SkillRepository(context);
         mAllSkills = mRepository.getAllSkills();
     }
 
@@ -35,6 +37,7 @@ public class FetchUserSkillsFromLocalMemory extends BaseObservable<FetchUserSkil
             notifySuccess(mAllSkills);
         } catch (Exception e){
             notifyFailure();
+            Log.e("FetchUserSkills", "Fetch error: " + e);
         }
     }
 

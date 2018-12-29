@@ -44,4 +44,16 @@ public class UserSkillsScreenFragment extends BaseFragment {
         super.onStop();
         mUserSkillsScreenController.onStop();
     }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        mUserSkillsScreenController.onResume();
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        mUserSkillsScreenController.onPause();
+    }
 }
