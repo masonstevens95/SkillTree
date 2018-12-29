@@ -37,7 +37,7 @@ public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkill
                                        @Nullable ViewGroup parent,
                                        ViewMvcFactory viewMvcFactory){
 
-        setRootView(inflater.inflate(R.layout.layout_user_skill_list, parent, false));
+        setRootView(inflater.inflate(R.layout.layout_userskills_list, parent, false));
 
         mRecyclerSkills = findViewById(R.id.skill_recycler_view);
         mRecyclerSkills.setLayoutManager(new LinearLayoutManager(getContext()));

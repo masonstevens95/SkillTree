@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
-import galacticgames.android.skilltree.screens.homescreen.HomeScreenViewMvc;
-import galacticgames.android.skilltree.screens.homescreen.HomeScreenViewMvcImpl;
-import galacticgames.android.skilltree.screens.tempnewskillscreen.NewSkillScreenViewMvc;
-import galacticgames.android.skilltree.screens.tempnewskillscreen.NewSkillScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.home.HomeScreenViewMvc;
+import galacticgames.android.skilltree.screens.home.HomeScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenViewMvc;
+import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenViewMvcImpl;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvc;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvcImpl;
 import galacticgames.android.skilltree.screens.userskills.userskillsitem.UserSkillsListItemViewMvc;

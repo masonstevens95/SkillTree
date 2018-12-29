@@ -1,19 +1,15 @@
-package galacticgames.android.skilltree.screens.tempnewskillscreen;
+package galacticgames.android.skilltree.screens.tempnewskill;
 
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import galacticgames.android.skilltree.R;
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
-import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
 import galacticgames.android.skilltree.screens.common.views.BaseObservableViewMvc;
 
 public class NewSkillScreenViewMvcImpl extends BaseObservableViewMvc<NewSkillScreenViewMvc.Listener>
@@ -33,7 +29,7 @@ public class NewSkillScreenViewMvcImpl extends BaseObservableViewMvc<NewSkillScr
                                        @Nullable ViewGroup parent,
                                        ViewMvcFactory viewMvcFactory){
 
-        setRootView(inflater.inflate(R.layout.layout_new_skill, parent, false));
+        setRootView(inflater.inflate(R.layout.layout_tempnewskill_main, parent, false));
 
         titleEditText = findViewById(R.id.skill_title);
 

@@ -1,8 +1,4 @@
-package galacticgames.android.skilltree.screens.tempnewskillscreen;
-
-import android.content.Context;
-import android.content.Intent;
-import android.text.TextUtils;
+package galacticgames.android.skilltree.screens.tempnewskill;
 
 import java.util.Random;
 
@@ -12,9 +8,6 @@ import galacticgames.android.skilltree.screens.common.controllers.HomePressDispa
 import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
 import galacticgames.android.skilltree.skills.Skill;
 import galacticgames.android.skilltree.skills.SkillRepository;
-
-import static android.app.Activity.RESULT_CANCELED;
-import static android.app.Activity.RESULT_OK;
 
 public class NewSkillScreenController implements NewSkillScreenViewMvc.Listener, HomePressedListener {
 

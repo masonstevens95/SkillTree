@@ -19,7 +19,7 @@ public class UserSkillsListItemViewMvcImpl extends BaseObservableViewMvc<UserSki
 
     public UserSkillsListItemViewMvcImpl(LayoutInflater inflater,
                                          @Nullable ViewGroup parent){
-        setRootView(inflater.inflate(R.layout.layout_user_skill_list_item, parent, false));
+        setRootView(inflater.inflate(R.layout.layout_userskills_list_item, parent, false));
 
         mSkillName = findViewById(R.id.skill_name);
         getRootView().setOnClickListener(new View.OnClickListener() {

@@ -1,10 +1,9 @@
-package galacticgames.android.skilltree.screens.homescreen;
+package galacticgames.android.skilltree.screens.home;
 
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.List;
@@ -30,7 +29,7 @@ public class HomeScreenViewMvcImpl extends BaseObservableViewMvc<HomeScreenViewM
                                  ViewGroup parent,
                                  ViewMvcFactory viewMvcFactory) {
 
-        setRootView(layoutInflater.inflate(R.layout.layout_home, parent, false));
+        setRootView(layoutInflater.inflate(R.layout.layout_home_main, parent, false));
 
         mSkillsButton = findViewById(R.id.skillsButton);
         mSearchButton = findViewById(R.id.searchButton);

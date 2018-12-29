@@ -1,6 +1,5 @@
 package galacticgames.android.skilltree.common.dependencyinjection;
 
-import android.app.Application;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -13,8 +12,8 @@ import galacticgames.android.skilltree.screens.common.controllers.BackPressDispa
 import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
-import galacticgames.android.skilltree.screens.homescreen.HomeScreenController;
-import galacticgames.android.skilltree.screens.tempnewskillscreen.NewSkillScreenController;
+import galacticgames.android.skilltree.screens.home.HomeScreenController;
+import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenController;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenController;
 import galacticgames.android.skilltree.skills.FetchUserSkillsFromLocalMemory;
 import galacticgames.android.skilltree.skills.SkillRepository;

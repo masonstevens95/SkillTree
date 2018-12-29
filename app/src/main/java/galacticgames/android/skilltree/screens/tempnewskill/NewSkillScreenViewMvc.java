@@ -1,4 +1,4 @@
-package galacticgames.android.skilltree.screens.tempnewskillscreen;
+package galacticgames.android.skilltree.screens.tempnewskill;
 
 import galacticgames.android.skilltree.screens.common.views.ObservableViewMvc;
 

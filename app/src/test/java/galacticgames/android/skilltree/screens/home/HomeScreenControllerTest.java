@@ -1,23 +1,8 @@
-package galacticgames.android.skilltree.screens.homescreen;
+package galacticgames.android.skilltree.screens.home;
 
-import static org.junit.Assert.*;
-
-import org.hamcrest.CoreMatchers;
 import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.ArgumentMatchers;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import java.util.List;
-
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HomeScreenControllerTest {

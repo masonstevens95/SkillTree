@@ -1,4 +1,4 @@
-package galacticgames.android.skilltree.screens.tempnewskillscreen;
+package galacticgames.android.skilltree.screens.tempnewskill;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

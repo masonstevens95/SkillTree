@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity implements BackPressDispatcher,
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_content_frame);
+        setContentView(R.layout.layout_common_content_frame);
         mScreensNavigator = getCompositionRoot().getScreensNavigator();
 
         if (savedInstanceState == null) {

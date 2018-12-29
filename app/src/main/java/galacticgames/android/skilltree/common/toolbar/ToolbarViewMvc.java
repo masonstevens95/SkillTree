@@ -40,7 +40,7 @@ public class ToolbarViewMvc extends BaseViewMvc {
     private SaveClickListener mSaveClickListener;
 
     public ToolbarViewMvc(LayoutInflater inflater, ViewGroup parent) {
-        setRootView(inflater.inflate(R.layout.layout_toolbar, parent, false));
+        setRootView(inflater.inflate(R.layout.layout_common_toolbar, parent, false));
         mTxtTitle = findViewById(R.id.txt_toolbar_title);
         mBtnHamburger = findViewById(R.id.btn_hamburger);
         mBtnHamburger.setOnClickListener(new View.OnClickListener() {

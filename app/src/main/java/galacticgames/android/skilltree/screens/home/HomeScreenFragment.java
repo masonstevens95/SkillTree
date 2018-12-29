@@ -1,4 +1,4 @@
-package galacticgames.android.skilltree.screens.homescreen;
+package galacticgames.android.skilltree.screens.home;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

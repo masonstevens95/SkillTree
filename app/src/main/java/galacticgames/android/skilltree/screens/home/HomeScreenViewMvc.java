@@ -1,6 +1,5 @@
-package galacticgames.android.skilltree.screens.homescreen;
+package galacticgames.android.skilltree.screens.home;
 
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.util.List;
