@@ -1,27 +1,25 @@
 package galacticgames.android.skilltree.skills;
 
-import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.util.List;
 
 public class SkillRepository {
 
-    private SkillDao mSkillDao;
+    private static SkillDao mSkillDao;
     private static List<Skill> mAllSkills;
-
-    //trying to replace Application with Context
-//    public SkillRepository(Application application){
-//        SkillRoomDatabase db = SkillRoomDatabase.getDatabase(application);
-//        mSkillDao = db.mSkillDao();
-//        mAllSkills = mSkillDao.getAllSkills();
-//    }
 
     public SkillRepository(Context context){
         SkillRoomDatabase db = SkillRoomDatabase.getDatabase(context);
         mSkillDao = db.mSkillDao();
-        new getAllSkillsAsyncTask(mSkillDao).execute();
+        //TODO: fix this terrible hack-y solution. This will block main thread if there are a bunch of skills
+        try {
+            mAllSkills = new getAllSkillsAsyncTask(mSkillDao).execute().get();
+        }catch (Exception e){
+            Log.e("SKILREPO", "Exception: " + e);
+        }
     }
 
     List<Skill> getAllSkills() {
@@ -47,7 +45,7 @@ public class SkillRepository {
         }
     }
 
-    private static class getAllSkillsAsyncTask extends AsyncTask<Void, Void, Void> {
+    private static class getAllSkillsAsyncTask extends AsyncTask<Void, Void, List<Skill>> {
 
         private SkillDao mAsyncTaskDao;
 
@@ -56,9 +54,8 @@ public class SkillRepository {
         }
 
         @Override
-        protected Void doInBackground(Void... voids) {
-            mAllSkills = mAsyncTaskDao.getAllSkills();
-            return null;
+        protected List<Skill> doInBackground(Void... voids) {
+            return mAsyncTaskDao.getAllSkills();
         }
     }
 

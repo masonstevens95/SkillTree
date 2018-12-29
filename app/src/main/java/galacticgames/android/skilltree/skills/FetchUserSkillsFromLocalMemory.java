@@ -16,14 +16,12 @@ public class FetchUserSkillsFromLocalMemory extends BaseObservable<FetchUserSkil
         void onUserSkillsFetchFailed();
     }
 
-    //instead of stackoverflowAPI, do i use room?
     private SkillRepository mRepository;
     private List<Skill> mAllSkills;
 
-    //TODO: populate constructor... check if application is what we need
-    public FetchUserSkillsFromLocalMemory(Context context){
+    public FetchUserSkillsFromLocalMemory(SkillRepository skillRepository){
         //need this?
-        mRepository = new SkillRepository(context);
+        mRepository = skillRepository;
         mAllSkills = mRepository.getAllSkills();
     }
 

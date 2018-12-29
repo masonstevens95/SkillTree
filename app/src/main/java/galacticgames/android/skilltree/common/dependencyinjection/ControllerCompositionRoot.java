@@ -97,8 +97,12 @@ public class ControllerCompositionRoot {
         );
     }
 
+    public SkillRepository getSkillRepository(){
+        return new SkillRepository(getContext());
+    }
+
     public FetchUserSkillsFromLocalMemory getFetchUserSkillsFromLocalMemory() {
-        return new FetchUserSkillsFromLocalMemory(getContext());
+        return new FetchUserSkillsFromLocalMemory(getSkillRepository());
     }
 
     public UserSkillsScreenController getUserSkillsScreenController() {
@@ -116,7 +120,7 @@ public class ControllerCompositionRoot {
             getScreensNavigator(),
             getToastsHelper(),
             getHomePressDispatcher(),
-            getContext()
+            getSkillRepository()
         );
     }
 }

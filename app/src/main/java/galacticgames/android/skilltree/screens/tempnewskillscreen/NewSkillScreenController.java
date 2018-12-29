@@ -28,12 +28,12 @@ public class NewSkillScreenController implements NewSkillScreenViewMvc.Listener,
     public NewSkillScreenController(ScreensNavigator screensNavigator,
                                     ToastsHelper toastsHelper,
                                     HomePressDispatcher homePressDispatcher,
-                                    Context context){
+                                    SkillRepository skillRepository){
 
         mScreensNavigator = screensNavigator;
         mToastsHelper = toastsHelper;
         mHomePressDispatcher = homePressDispatcher;
-        mSkillRepository = new SkillRepository(context);
+        mSkillRepository = skillRepository;
     }
 
     public void bindView(NewSkillScreenViewMvc viewMvc) {
@@ -62,28 +62,23 @@ public class NewSkillScreenController implements NewSkillScreenViewMvc.Listener,
         if (s.isEmpty()){
             mToastsHelper.showEmptyEditTextError();
         }else{
-            //TODO: does this break MVC?
-            //generate random char. definitely need to switch to UUID soon
+            //TODO: generate random char. definitely need to switch to UUID soon
             Random r = new Random();
             char c = (char)(r.nextInt(26) + 'a');
 
             Skill skill = new Skill("aaaaa" + c, s);
-
-            //TODO: add to room? dao.insert
             insert(skill);
         }
 
         mScreensNavigator.navigateUp();
     }
 
-
-    //TODO: any other methods -- typing stuff, adding to db?
-
-    public void insert(Skill skill) { mSkillRepository.insert(skill); }
+    public void insert(Skill skill) {
+        mSkillRepository.insert(skill);
+    }
 
     @Override
     public boolean onHomePressed() {
-        //TODO: nav to home, pop all off stack
         mScreensNavigator.toHome();
         return false;
     }

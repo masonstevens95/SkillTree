@@ -35,23 +35,26 @@ public class UserSkillsScreenController implements UserSkillsScreenViewMvc.Liste
     }
 
     public void onStart(){
-        mViewMvc.registerListener(this);
-        mFetchUserSkillsFromLocalMemory.registerListener(this);
-        mHomePressDispatcher.registerListener(this);
+
     }
 
     public void onResume(){
+        mViewMvc.registerListener(this);
+        mFetchUserSkillsFromLocalMemory.registerListener(this);
+        mHomePressDispatcher.registerListener(this);
+
         mViewMvc.showProgressIndication();
         mFetchUserSkillsFromLocalMemory.fetchUserSkillsAndNotify();
     }
 
     public void onPause(){
-    }
-
-    public void onStop(){
         mViewMvc.unregisterListener(this);
         mFetchUserSkillsFromLocalMemory.unregisterListener(this);
         mHomePressDispatcher.unregisterListener(this);
+    }
+
+    public void onStop(){
+
     }
 
     @Override
