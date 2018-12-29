@@ -51,7 +51,7 @@ public class TimePickerFragment extends android.support.v4.app.DialogFragment{
 
         //inflate the dialog layout
         View v = LayoutInflater.from(getActivity())
-                .inflate(R.layout.dialog_time, null);
+                .inflate(R.layout.legacy_dialog_time, null);
 
         //null is onDateChangedListener
         //LogFragment now shows DatePickerFragment what date to show.

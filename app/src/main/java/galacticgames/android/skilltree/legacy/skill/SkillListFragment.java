@@ -41,7 +41,7 @@ public class SkillListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_list_skill, container, false);
+        View view = inflater.inflate(R.layout.legacy_fragment_list_skill, container, false);
 
         mSkillListRecyclerView = (RecyclerView) view.findViewById(R.id.skill_recycler_view);
         mSkillListRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -87,7 +87,7 @@ public class SkillListFragment extends Fragment {
         private TextView mTitleTextView;
         //constructor
         public SkillHolder(LayoutInflater inflater, ViewGroup parent){
-            super(inflater.inflate(R.layout.fragment_list_skill_item, parent, false));
+            super(inflater.inflate(R.layout.legacy_fragment_list_skill_item, parent, false));
 
             //click listener
             itemView.setOnClickListener(this);

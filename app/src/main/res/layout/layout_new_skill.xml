@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="0dp">
 
-    <include layout="@layout/element_toolbar"/>
+    <include layout="@layout/legacy_element_toolbar"/>
 
     <!--Title-->
     <TextView

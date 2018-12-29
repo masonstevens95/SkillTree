@@ -72,7 +72,7 @@ public class LogFragment extends Fragment implements AdapterView.OnItemSelectedL
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View v = inflater.inflate(R.layout.fragment_entry_log, container, false);
+        View v = inflater.inflate(R.layout.legacy_fragment_entry_log, container, false);
 
         //******************Skill Dropdown********************//
         mSkillSpinner = (Spinner) v.findViewById(R.id.log_skill_spinner);

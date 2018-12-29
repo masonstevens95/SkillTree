@@ -56,15 +56,6 @@ public class ControllerCompositionRoot {
 //    public FetchLastActiveQuestionsUseCase getFetchLastActiveQuestionsUseCase() {
 //        return new FetchLastActiveQuestionsUseCase(getStackoverflowApi());
 //    }
-//
-//    public QuestionsListController getQuestionsListController() {
-//        return new QuestionsListController(
-//                getFetchLastActiveQuestionsUseCase(),
-//                getScreensNavigator(),
-//                getToastsHelper(),
-//                getBackPressDispatcher()
-//        );
-//    }
 
     public ToastsHelper getToastsHelper() {
         return new ToastsHelper(getContext());

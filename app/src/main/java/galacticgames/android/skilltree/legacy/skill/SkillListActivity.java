@@ -21,7 +21,7 @@ public class SkillListActivity extends SingleFragmentActivity
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.activity_twopane;
+        return R.layout.legacy_activity_twopane;
     }
 
     //we delegate a little more to the activity now that we have a two pane interface (currently
