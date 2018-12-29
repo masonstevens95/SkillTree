@@ -28,5 +28,6 @@
 
     <string name="home_screen_title">"SkillTree</string>
     <string name="new_skill_screen_title">Create a New Skill (Placeholder)</string>
+    <string name="user_skills_list_screen_title">Your Skills</string>
 
 </resources>

@@ -63,7 +63,7 @@ public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkill
     }
 
     private void initToolbar() {
-        mToolbarViewMvc.setTitle(getString(R.string.questions_list_screen_title));
+        mToolbarViewMvc.setTitle(getString(R.string.user_skills_list_screen_title));
         mToolbar.addView(mToolbarViewMvc.getRootView());
         mToolbarViewMvc.enableHomeButtonAndListen(new ToolbarViewMvc.HomeClickListener(){
             @Override
