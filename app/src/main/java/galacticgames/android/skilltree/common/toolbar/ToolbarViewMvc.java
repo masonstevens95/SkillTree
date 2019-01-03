@@ -28,16 +28,22 @@ public class ToolbarViewMvc extends BaseViewMvc {
         void onSaveClicked();
     }
 
+    public interface AddClickListener {
+        void onAddClicked();
+    }
+
     private final TextView mTxtTitle;
     private final ImageButton mBtnBack;
     private final ImageButton mBtnHamburger;
     private final ImageButton mBtnHome;
     private final ImageButton mBtnSave;
+    private final ImageButton mBtnAdd;
 
     private NavigateUpClickListener mNavigateUpClickListener;
     private HamburgerClickListener mHamburgerClickListener;
     private HomeClickListener mHomeClickListener;
     private SaveClickListener mSaveClickListener;
+    private AddClickListener mAddClickListener;
 
     public ToolbarViewMvc(LayoutInflater inflater, ViewGroup parent) {
         setRootView(inflater.inflate(R.layout.layout_common_toolbar, parent, false));
@@ -68,6 +74,13 @@ public class ToolbarViewMvc extends BaseViewMvc {
             @Override
             public void onClick(View view) {
                 mSaveClickListener.onSaveClicked();
+            }
+        });
+        mBtnAdd = findViewById(R.id.btn_add);
+        mBtnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAddClickListener.onAddClicked();
             }
         });
     }
@@ -101,8 +114,19 @@ public class ToolbarViewMvc extends BaseViewMvc {
     }
 
     public void enableSaveButtonAndListen(SaveClickListener saveClickListener) {
+//        TODO: if (mBtnAdd != null) {
+//            throw new RuntimeException("Add and save shouldn't be shown together");
+//        }
         mSaveClickListener = saveClickListener;
         mBtnSave.setVisibility(View.VISIBLE);
+    }
+
+    public void enableAddButtonAndListen(AddClickListener addClickListener) {
+//        TODO: if (mBtnSave != null) {
+//            throw new RuntimeException("Add and save shouldn't be shown together");
+//        }
+        mAddClickListener = addClickListener;
+        mBtnAdd.setVisibility(View.VISIBLE);
     }
 
 }

@@ -6,8 +6,8 @@ import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
-import galacticgames.android.skilltree.skills.FetchUserSkillsFromLocalMemory;
-import galacticgames.android.skilltree.skills.Skill;
+import galacticgames.android.skilltree.skill.FetchUserSkillsFromLocalMemory;
+import galacticgames.android.skilltree.skill.Skill;
 
 public class UserSkillsScreenController implements UserSkillsScreenViewMvc.Listener,
         FetchUserSkillsFromLocalMemory.Listener,
@@ -65,7 +65,8 @@ public class UserSkillsScreenController implements UserSkillsScreenViewMvc.Liste
     @Override
     public void onSkillClicked(Skill skill) {
         //TODO: mScreensNavigator.toSkillDetails(skill.getId());
-        mToastsHelper.showTemporaryNavigation("SkillDetails, " + skill.getTitle());
+        //mToastsHelper.showTemporaryNavigation("SkillDetails, " + skill.getTitle());
+        mScreensNavigator.toSkillDetails(skill.getId());
     }
 
     @Override

@@ -13,10 +13,11 @@ import galacticgames.android.skilltree.screens.common.controllers.HomePressDispa
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
 import galacticgames.android.skilltree.screens.home.HomeScreenController;
+import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenController;
 import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenController;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenController;
-import galacticgames.android.skilltree.skills.FetchUserSkillsFromLocalMemory;
-import galacticgames.android.skilltree.skills.SkillRepository;
+import galacticgames.android.skilltree.skill.FetchUserSkillsFromLocalMemory;
+import galacticgames.android.skilltree.skill.SkillRepository;
 
 public class ControllerCompositionRoot {
 
@@ -111,6 +112,14 @@ public class ControllerCompositionRoot {
             getToastsHelper(),
             getHomePressDispatcher(),
             getSkillRepository()
+        );
+    }
+
+    public SkillDetailsScreenController getSkillDetailsScreenController() {
+        return new SkillDetailsScreenController(
+                getScreensNavigator(),
+                getToastsHelper(),
+                getHomePressDispatcher()
         );
     }
 }

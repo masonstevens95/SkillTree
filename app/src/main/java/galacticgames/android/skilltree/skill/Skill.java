@@ -1,11 +1,9 @@
-package galacticgames.android.skilltree.skills;
+package galacticgames.android.skilltree.skill;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
-
-import java.util.UUID;
 
 @Entity(tableName = "skill_table")
 public class Skill {

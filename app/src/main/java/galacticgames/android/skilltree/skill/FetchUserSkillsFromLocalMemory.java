@@ -1,10 +1,7 @@
-package galacticgames.android.skilltree.skills;
+package galacticgames.android.skilltree.skill;
 
-import android.app.Application;
-import android.content.Context;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import galacticgames.android.skilltree.common.BaseObservable;

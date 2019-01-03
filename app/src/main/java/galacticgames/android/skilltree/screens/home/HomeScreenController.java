@@ -7,6 +7,9 @@ import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
 
+//TODO: get rid of home button on this page
+//TODO: any time navigate away from this page, animate tree to the toolbar.
+
 public class HomeScreenController implements HomeScreenViewMvc.Listener, HomePressedListener {
 
     private final ScreensNavigator mScreensNavigator;

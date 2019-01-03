@@ -12,8 +12,6 @@ public interface HomeScreenViewMvc extends ObservableViewMvc<HomeScreenViewMvc.L
         void onImageButtonClicked(ImageButton imageButton);
     }
 
-    void bindButtons(List<ImageButton> buttons);
-
 
 
     //TODO: add animations, outward flare

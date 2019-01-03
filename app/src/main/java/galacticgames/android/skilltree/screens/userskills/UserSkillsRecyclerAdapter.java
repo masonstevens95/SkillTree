@@ -9,7 +9,7 @@ import java.util.List;
 
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
 import galacticgames.android.skilltree.screens.userskills.userskillsitem.UserSkillsListItemViewMvc;
-import galacticgames.android.skilltree.skills.Skill;
+import galacticgames.android.skilltree.skill.Skill;
 
 public class UserSkillsRecyclerAdapter extends RecyclerView.Adapter<UserSkillsRecyclerAdapter.MyViewHolder>
             implements UserSkillsListItemViewMvc.Listener {

@@ -1,8 +1,10 @@
-package galacticgames.android.skilltree.skills;
+package galacticgames.android.skilltree.skill;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
+
+import galacticgames.android.skilltree.achievement.Achievement;
 
 public class SkillsSchema {
 
@@ -13,9 +15,9 @@ public class SkillsSchema {
     private final String mId;
 
     @SerializedName("achievements")
-    private final List<Achievements> mAchievementsList;
+    private final List<Achievement> mAchievementsList;
 
-    public SkillsSchema(String title, String id, List<Achievements> achievements) {
+    public SkillsSchema(String title, String id, List<Achievement> achievements) {
         mTitle = title;
         mId = id;
         mAchievementsList = achievements;
@@ -29,7 +31,7 @@ public class SkillsSchema {
         return mId;
     }
 
-    public List<Achievements> getAchievementsList(){
+    public List<Achievement> getAchievementsList(){
         return mAchievementsList;
     }
 }

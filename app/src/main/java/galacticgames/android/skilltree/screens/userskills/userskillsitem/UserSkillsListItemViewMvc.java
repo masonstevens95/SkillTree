@@ -1,8 +1,7 @@
 package galacticgames.android.skilltree.screens.userskills.userskillsitem;
 
 import galacticgames.android.skilltree.screens.common.views.ObservableViewMvc;
-import galacticgames.android.skilltree.screens.userskills.UserSkillsRecyclerAdapter;
-import galacticgames.android.skilltree.skills.Skill;
+import galacticgames.android.skilltree.skill.Skill;
 
 public interface UserSkillsListItemViewMvc extends ObservableViewMvc<UserSkillsListItemViewMvc.Listener> {
 

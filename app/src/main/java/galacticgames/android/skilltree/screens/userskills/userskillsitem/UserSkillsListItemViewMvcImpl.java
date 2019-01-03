@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import galacticgames.android.skilltree.R;
 import galacticgames.android.skilltree.screens.common.views.BaseObservableViewMvc;
-import galacticgames.android.skilltree.skills.Skill;
+import galacticgames.android.skilltree.skill.Skill;
 
 public class UserSkillsListItemViewMvcImpl extends BaseObservableViewMvc<UserSkillsListItemViewMvc.Listener>
                 implements UserSkillsListItemViewMvc {

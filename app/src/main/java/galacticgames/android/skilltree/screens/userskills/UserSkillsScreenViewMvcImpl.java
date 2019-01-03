@@ -16,7 +16,7 @@ import galacticgames.android.skilltree.R;
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
 import galacticgames.android.skilltree.screens.common.views.BaseObservableViewMvc;
-import galacticgames.android.skilltree.skills.Skill;
+import galacticgames.android.skilltree.skill.Skill;
 
 public class UserSkillsScreenViewMvcImpl extends BaseObservableViewMvc<UserSkillsScreenViewMvc.Listener>
             implements UserSkillsScreenViewMvc, UserSkillsRecyclerAdapter.Listener{

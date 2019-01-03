@@ -7,6 +7,12 @@ import android.view.ViewGroup;
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
 import galacticgames.android.skilltree.screens.home.HomeScreenViewMvc;
 import galacticgames.android.skilltree.screens.home.HomeScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenViewMvc;
+import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.achievementstabitem.AchievementsTabListItemViewMvc;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.achievementstabitem.AchievementsTabListItemViewMvcImpl;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.logstabitem.LogsTabListItemViewMvc;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.logstabitem.LogsTabListItemViewMvcImpl;
 import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenViewMvc;
 import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenViewMvcImpl;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvc;
@@ -40,5 +46,17 @@ public class ViewMvcFactory {
 
     public NewSkillScreenViewMvc getNewSkillScreenViewMvc(@Nullable ViewGroup parent) {
         return new NewSkillScreenViewMvcImpl(mLayoutInflater, parent, this);
+    }
+
+    public AchievementsTabListItemViewMvc getAchievementsTabListItemViewMvc(@Nullable ViewGroup parent){
+        return new AchievementsTabListItemViewMvcImpl(mLayoutInflater, parent);
+    }
+
+    public LogsTabListItemViewMvc getLogsTabListItemViewMvc(@Nullable ViewGroup parent){
+        return new LogsTabListItemViewMvcImpl(mLayoutInflater, parent);
+    }
+
+    public SkillDetailsScreenViewMvc getSkillDetailsScreenViewMvc(@Nullable ViewGroup parent) {
+        return new SkillDetailsScreenViewMvcImpl(mLayoutInflater, parent, this);
     }
 }

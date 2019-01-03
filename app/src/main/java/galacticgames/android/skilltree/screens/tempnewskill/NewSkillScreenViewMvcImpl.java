@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import java.util.List;
+
 import galacticgames.android.skilltree.R;
+import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
 import galacticgames.android.skilltree.screens.common.views.BaseObservableViewMvc;

@@ -6,8 +6,8 @@ import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
-import galacticgames.android.skilltree.skills.Skill;
-import galacticgames.android.skilltree.skills.SkillRepository;
+import galacticgames.android.skilltree.skill.Skill;
+import galacticgames.android.skilltree.skill.SkillRepository;
 
 public class NewSkillScreenController implements NewSkillScreenViewMvc.Listener, HomePressedListener {
 

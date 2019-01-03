@@ -1,4 +1,4 @@
-package galacticgames.android.skilltree.skills;
+package galacticgames.android.skilltree.skill;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;

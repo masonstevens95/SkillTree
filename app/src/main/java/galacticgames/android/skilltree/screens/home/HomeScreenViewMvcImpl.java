@@ -91,9 +91,4 @@ public class HomeScreenViewMvcImpl extends BaseObservableViewMvc<HomeScreenViewM
             listener.onImageButtonClicked(imageButton);
         }
     }
-
-    @Override
-    public void bindButtons(List<ImageButton> buttons) {
-        //dont think i need this?
-    }
 }
