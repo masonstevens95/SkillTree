@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import galacticgames.android.skilltree.achievement.Achievement;
+import galacticgames.android.skilltree.skill.achievement.Achievement;
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
-import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenViewMvc;
-import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenViewMvcImpl;
 import galacticgames.android.skilltree.screens.skilldetails.achievementstab.achievementstabitem.AchievementsTabListItemViewMvc;
 
 public class SkillDetailsAchievementsTabRecyclerAdapter extends RecyclerView.Adapter<SkillDetailsAchievementsTabRecyclerAdapter.MyViewHolder>

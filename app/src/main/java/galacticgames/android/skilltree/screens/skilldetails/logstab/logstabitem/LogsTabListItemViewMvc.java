@@ -1,6 +1,5 @@
 package galacticgames.android.skilltree.screens.skilldetails.logstab.logstabitem;
 
-import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.log.Log;
 import galacticgames.android.skilltree.screens.common.views.ObservableViewMvc;
 

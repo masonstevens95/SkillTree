@@ -8,6 +8,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
+import java.util.UUID;
+
 @Database(entities = {Skill.class}, version = 1)
 public abstract class SkillRoomDatabase extends RoomDatabase {
 
@@ -50,8 +52,9 @@ public abstract class SkillRoomDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(final Void... params) {
+            //every time we update the APK, everything gets deleted. This means we need to have the data off phone?
             mDao.deleteAll();
-            Skill skill = new Skill("aaaaaa", "Test Skill");
+            Skill skill = new Skill("Test Skill");
             mDao.insert(skill);
             return null;
         }

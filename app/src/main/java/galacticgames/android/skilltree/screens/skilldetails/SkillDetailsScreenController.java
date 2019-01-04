@@ -5,10 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import galacticgames.android.skilltree.R;
-import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
-import galacticgames.android.skilltree.log.Log;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
 import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabFragment;

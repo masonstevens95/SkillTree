@@ -3,28 +3,16 @@ package galacticgames.android.skilltree.screens.skilldetails;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ProgressBar;
 
-import java.util.List;
-
 import galacticgames.android.skilltree.R;
-import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.common.toolbar.ToolbarViewMvc;
-import galacticgames.android.skilltree.log.Log;
 import galacticgames.android.skilltree.screens.common.ViewMvcFactory;
 import galacticgames.android.skilltree.screens.common.views.BaseObservableViewMvc;
-import galacticgames.android.skilltree.screens.skilldetails.achievementstab.SkillDetailsAchievementsTabRecyclerAdapter;
-import galacticgames.android.skilltree.screens.skilldetails.logstab.SkillDetailsLogsTabRecyclerAdapter;
 
 public class SkillDetailsScreenViewMvcImpl extends BaseObservableViewMvc<SkillDetailsScreenViewMvc.Listener>
             implements SkillDetailsScreenViewMvc

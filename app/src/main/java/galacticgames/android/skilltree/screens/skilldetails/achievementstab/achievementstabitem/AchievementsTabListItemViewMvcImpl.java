@@ -4,12 +4,11 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import galacticgames.android.skilltree.R;
-import galacticgames.android.skilltree.achievement.Achievement;
+import galacticgames.android.skilltree.skill.achievement.Achievement;
 import galacticgames.android.skilltree.screens.common.views.BaseObservableViewMvc;
 
 public class AchievementsTabListItemViewMvcImpl extends BaseObservableViewMvc<AchievementsTabListItemViewMvc.Listener>

@@ -2,7 +2,7 @@ package galacticgames.android.skilltree.screens.skilldetails.achievementstab;
 
 import java.util.List;
 
-import galacticgames.android.skilltree.achievement.Achievement;
+import galacticgames.android.skilltree.skill.achievement.Achievement;
 import galacticgames.android.skilltree.screens.common.views.ObservableViewMvc;
 
 public interface AchievementsTabViewMvc extends ObservableViewMvc<AchievementsTabViewMvc.Listener> {

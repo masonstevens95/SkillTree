@@ -1,10 +1,8 @@
 package galacticgames.android.skilltree.screens.skilldetails.logstab;
 
-import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
 import galacticgames.android.skilltree.log.Log;
-import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabViewMvc;
 
 //TODO: add impl for fetch Logs
 

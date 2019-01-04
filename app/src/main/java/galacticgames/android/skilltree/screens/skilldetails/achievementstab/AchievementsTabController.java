@@ -1,12 +1,8 @@
 package galacticgames.android.skilltree.screens.skilldetails.achievementstab;
 
-import galacticgames.android.skilltree.achievement.Achievement;
+import galacticgames.android.skilltree.skill.achievement.Achievement;
 import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
-import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
-import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
-import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenViewMvc;
-import galacticgames.android.skilltree.skill.FetchUserSkillsFromLocalMemory;
 
 //TODO: add impl for fetch achievements
 //Potentially just get skills which will ideally have the achievements.

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import galacticgames.android.skilltree.achievement.Achievement;
+import galacticgames.android.skilltree.skill.achievement.Achievement;
 
 public class SkillsSchema {
 

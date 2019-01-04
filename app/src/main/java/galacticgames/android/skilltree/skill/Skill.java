@@ -5,6 +5,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import java.util.UUID;
+
 @Entity(tableName = "skill_table")
 public class Skill {
 
@@ -16,7 +18,7 @@ public class Skill {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "id")
-    private final String mId;
+    private String mId;
 
     @ColumnInfo(name = "title")
     private final String mTitle;
@@ -27,9 +29,8 @@ public class Skill {
     }
 
     //constructor
-    public Skill(String id, String title){
-//        this(UUID.randomUUID());
-        mId = id;
+    public Skill(String title){
+        mId = UUID.randomUUID().toString();
         mTitle = title;
     }
 
@@ -40,6 +41,10 @@ public class Skill {
 //    public UUID getId() {
 //        return mId;
 //    }
+
+    public void setId(String id){
+        //mId = id;
+    }
 
     public String getId(){
         return mId;

@@ -1,6 +1,7 @@
 package galacticgames.android.skilltree.screens.tempnewskill;
 
 import java.util.Random;
+import java.util.UUID;
 
 import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
@@ -55,11 +56,7 @@ public class NewSkillScreenController implements NewSkillScreenViewMvc.Listener,
         if (s.isEmpty()){
             mToastsHelper.showEmptyEditTextError();
         }else{
-            //TODO: generate random char. definitely need to switch to UUID soon
-            Random r = new Random();
-            char c = (char)(r.nextInt(26) + 'a');
-
-            Skill skill = new Skill("aaaaa" + c, s);
+            Skill skill = new Skill(s);
             insert(skill);
         }
 

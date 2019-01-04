@@ -1,8 +1,5 @@
 package galacticgames.android.skilltree.screens.tempnewskill;
 
-import java.util.List;
-
-import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.screens.common.views.ObservableViewMvc;
 
 public interface NewSkillScreenViewMvc extends ObservableViewMvc<NewSkillScreenViewMvc.Listener> {
