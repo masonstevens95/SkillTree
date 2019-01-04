@@ -1,9 +1,17 @@
 package galacticgames.android.skilltree.common.screensnavigator;
 
 
+import android.support.v4.app.FragmentTransaction;
+
+import galacticgames.android.skilltree.R;
+import galacticgames.android.skilltree.legacy.log.LogFragment;
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameHelper;
 import galacticgames.android.skilltree.screens.home.HomeScreenFragment;
 import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenFragment;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabFragment;
+import galacticgames.android.skilltree.screens.skilldetails.graphtab.GraphTabFragment;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.LogsTabFragment;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.LogsTabViewMvc;
 import galacticgames.android.skilltree.screens.tempnewskill.NewSkillFragment;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenFragment;
 
@@ -41,8 +49,15 @@ public class ScreensNavigator {
         mFragmentFrameHelper.replaceFragment(SkillDetailsScreenFragment.newInstance());
     }
 
-    //TODO: enable this when layout is ready
-//    public void toSkillDetails(String id) {
-//        mFragmentFrameHelper.replaceFragment(UserSkillsDetailsScreenFragment.newInstance(id));
-//    }
+    public void tabToAchievements() {
+        mFragmentFrameHelper.replaceFragmentDontAddToBackstack(AchievementsTabFragment.newInstance());
+    }
+
+    public void tabToGraph() {
+        mFragmentFrameHelper.replaceFragmentDontAddToBackstack(GraphTabFragment.newInstance());
+    }
+
+    public void tabToLogs() {
+        mFragmentFrameHelper.replaceFragmentDontAddToBackstack(LogsTabFragment.newInstance());
+    }
 }

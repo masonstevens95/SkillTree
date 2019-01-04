@@ -27,24 +27,24 @@ import galacticgames.android.skilltree.screens.skilldetails.achievementstab.Skil
 import galacticgames.android.skilltree.screens.skilldetails.logstab.SkillDetailsLogsTabRecyclerAdapter;
 
 public class SkillDetailsScreenViewMvcImpl extends BaseObservableViewMvc<SkillDetailsScreenViewMvc.Listener>
-            implements SkillDetailsScreenViewMvc,
-            SkillDetailsAchievementsTabRecyclerAdapter.Listener,
-            SkillDetailsLogsTabRecyclerAdapter.Listener {
+            implements SkillDetailsScreenViewMvc
+//            SkillDetailsAchievementsTabRecyclerAdapter.Listener,
+//            SkillDetailsLogsTabRecyclerAdapter.Listener
+                                                        {
 
     //region final declarations
 
     private final ToolbarViewMvc mToolbarViewMvc;
 
     private final Toolbar mToolbar;
-    private final RecyclerView mRecyclerAchievements;
-    private final RecyclerView mRecyclerLogs;
-    private final SkillDetailsAchievementsTabRecyclerAdapter mAchievementsAdapter;
-    private final SkillDetailsLogsTabRecyclerAdapter mLogsAdapter;
+//    private final RecyclerView mRecyclerAchievements;
+//    private final RecyclerView mRecyclerLogs;
+//    private final SkillDetailsAchievementsTabRecyclerAdapter mAchievementsAdapter;
+//    private final SkillDetailsLogsTabRecyclerAdapter mLogsAdapter;
 
     private final BottomNavigationView mBottomNavigationView;
 
     private final ProgressBar mProgressBar;
-    private final Button mNewLogButton;
 
     //endregion
 
@@ -54,15 +54,15 @@ public class SkillDetailsScreenViewMvcImpl extends BaseObservableViewMvc<SkillDe
 
         setRootView(inflater.inflate(R.layout.layout_skilldetails_main, parent, false));
 
-        mRecyclerAchievements = findViewById(R.id.skilldetails_achievements_recyclerview);
-        mRecyclerAchievements.setLayoutManager(new LinearLayoutManager(getContext()));
-        mAchievementsAdapter = new SkillDetailsAchievementsTabRecyclerAdapter(this, viewMvcFactory);
-        mRecyclerAchievements.setAdapter(mAchievementsAdapter);
-
-        mRecyclerLogs = findViewById(R.id.skilldetails_logs_recyclerview);
-        mRecyclerLogs.setLayoutManager(new LinearLayoutManager(getContext()));
-        mLogsAdapter = new SkillDetailsLogsTabRecyclerAdapter(this, viewMvcFactory);
-        mRecyclerLogs.setAdapter(mLogsAdapter);
+//        mRecyclerAchievements = findViewById(R.id.skilldetails_achievements_recyclerview);
+//        mRecyclerAchievements.setLayoutManager(new LinearLayoutManager(getContext()));
+//        mAchievementsAdapter = new SkillDetailsAchievementsTabRecyclerAdapter(this, viewMvcFactory);
+//        mRecyclerAchievements.setAdapter(mAchievementsAdapter);
+//
+//        mRecyclerLogs = findViewById(R.id.skilldetails_logs_recyclerview);
+//        mRecyclerLogs.setLayoutManager(new LinearLayoutManager(getContext()));
+//        mLogsAdapter = new SkillDetailsLogsTabRecyclerAdapter(this, viewMvcFactory);
+//        mRecyclerLogs.setAdapter(mLogsAdapter);
 
         mBottomNavigationView = findViewById(R.id.bottom_navigation_view);
         mBottomNavigationView.setOnNavigationItemSelectedListener(
@@ -72,13 +72,19 @@ public class SkillDetailsScreenViewMvcImpl extends BaseObservableViewMvc<SkillDe
 
                         switch (menuItem.getItemId()){
                             case R.id.navigation_achievements:
-                                onAchievementTabClicked();
+                                for (Listener listener : getListeners()){
+                                    listener.onAchievementTabClicked();
+                                }
                                 return true;
                             case R.id.navigation_graph:
-                                onGraphTabClicked();
+                                for (Listener listener : getListeners()){
+                                    listener.onGraphTabClicked();
+                                }
                                 return true;
                             case R.id.navigation_log:
-                                onLogTabClicked();
+                                for (Listener listener : getListeners()){
+                                    listener.onLogTabClicked();
+                                }
                                 return true;
                         }
 
@@ -87,16 +93,6 @@ public class SkillDetailsScreenViewMvcImpl extends BaseObservableViewMvc<SkillDe
         });
 
         mProgressBar = findViewById(R.id.progress);
-
-        mNewLogButton = findViewById(R.id.btn_new_log);
-        mNewLogButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (Listener listener : getListeners()){
-                    listener.onAddClicked();
-                }
-            }
-        });
 
         mToolbar = findViewById(R.id.toolbar);
         mToolbarViewMvc = viewMvcFactory.getToolbarViewMvc(mToolbar);
@@ -126,58 +122,21 @@ public class SkillDetailsScreenViewMvcImpl extends BaseObservableViewMvc<SkillDe
     }
 
 
-    //@Override
     public void onAchievementTabClicked() {
         for (Listener listener : getListeners()){
             listener.onAchievementTabClicked();
         }
     }
 
-    @Override
-    public void onAchievementClicked(Achievement achievement) {
-        for (Listener listener : getListeners()){
-            listener.onAchievementClicked(achievement);
-        }
-    }
-
-    //@Override
     public void onGraphTabClicked() {
         for (Listener listener : getListeners()){
             listener.onGraphTabClicked();
         }
     }
 
-    //@Override
     public void onLogTabClicked() {
         for (Listener listener : getListeners()){
             listener.onLogTabClicked();
         }
-    }
-
-    @Override
-    public void onLogClicked(Log log) {
-        for (Listener listener : getListeners()){
-            listener.onLogClicked(log);
-        }
-    }
-
-    @Override
-    public void bindAchievements(List<Achievement> achievements) {
-        mAchievementsAdapter.bindAchievements(achievements);
-    }
-
-    @Override
-    public void bindLogs(List<Log> logs) {
-        mLogsAdapter.bindLogs(logs);
-    }
-
-    @Override
-    public void showProgressIndication() {
-        mProgressBar.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void hideProgressIndication() {
-        mProgressBar.setVisibility(View.GONE);
     }
 }

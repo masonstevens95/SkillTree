@@ -12,22 +12,11 @@ public interface SkillDetailsScreenViewMvc extends ObservableViewMvc<SkillDetail
         void onHomeClicked();
 
         void onAchievementTabClicked();
-        void onAchievementClicked(Achievement achievement);
 
         void onGraphTabClicked();
 
         void onLogTabClicked();
-        void onLogClicked(Log log);
 
         void onAddClicked();
     }
-
-    void bindAchievements(List<Achievement> achievements);
-
-    void bindLogs(List<Log> logs);
-
-    void showProgressIndication();
-
-    void hideProgressIndication();
-
 }

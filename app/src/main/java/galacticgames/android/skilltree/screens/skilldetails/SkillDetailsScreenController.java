@@ -1,11 +1,19 @@
 package galacticgames.android.skilltree.screens.skilldetails;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+
+import galacticgames.android.skilltree.R;
 import galacticgames.android.skilltree.achievement.Achievement;
 import galacticgames.android.skilltree.common.screensnavigator.ScreensNavigator;
 import galacticgames.android.skilltree.common.toastshelper.ToastsHelper;
 import galacticgames.android.skilltree.log.Log;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressDispatcher;
 import galacticgames.android.skilltree.screens.common.controllers.HomePressedListener;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabFragment;
+import galacticgames.android.skilltree.screens.skilldetails.graphtab.GraphTabFragment;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.LogsTabFragment;
 
 //TODO: add fetch Logs and Achievements from local memory
 public class SkillDetailsScreenController implements SkillDetailsScreenViewMvc.Listener,
@@ -13,8 +21,10 @@ public class SkillDetailsScreenController implements SkillDetailsScreenViewMvc.L
 
     //TODO: private final FetchUserSkillsFromLocalMemory mFetchUserSkillsFromLocalMemory;
     private final ScreensNavigator mScreensNavigator;
+//    private final ScreensNavigator mTabsScreensNavigator;
     private final ToastsHelper mToastsHelper;
     private final HomePressDispatcher mHomePressDispatcher;
+    private final FragmentManager mFragmentManager;
 
     public SkillDetailsScreenViewMvc mViewMvc;
 
@@ -22,11 +32,13 @@ public class SkillDetailsScreenController implements SkillDetailsScreenViewMvc.L
             //TODO: FetchUserSkillsFromLocalMemory fetchUserSkillsFromLocalMemory,
                                       ScreensNavigator screensNavigator,
                                       ToastsHelper toastsHelper,
-                                      HomePressDispatcher homePressDispatcher){
+                                      HomePressDispatcher homePressDispatcher,
+                                        FragmentManager fragmentManager){
         //TODO: mFetchUserSkillsFromLocalMemory = fetchUserSkillsFromLocalMemory;
         mScreensNavigator = screensNavigator;
         mToastsHelper = toastsHelper;
         mHomePressDispatcher = homePressDispatcher;
+        mFragmentManager = fragmentManager;
     }
 
     public void bindView(SkillDetailsScreenViewMvc viewMvc) {
@@ -35,6 +47,11 @@ public class SkillDetailsScreenController implements SkillDetailsScreenViewMvc.L
 
     public void onStart(){
 
+        Fragment fragment = AchievementsTabFragment.newInstance();
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        transaction.replace(R.id.tab_container, fragment);
+        transaction.commit();
+
     }
 
     public void onResume(){
@@ -42,7 +59,6 @@ public class SkillDetailsScreenController implements SkillDetailsScreenViewMvc.L
         //TODO: mFetchUserSkillsFromLocalMemory.registerListener(this);
         mHomePressDispatcher.registerListener(this);
 
-        mViewMvc.showProgressIndication();
         //TODO: mFetchUserSkillsFromLocalMemory.fetchUserSkillsAndNotify();
     }
 
@@ -63,28 +79,29 @@ public class SkillDetailsScreenController implements SkillDetailsScreenViewMvc.L
 
     @Override
     public void onAchievementTabClicked() {
-        mToastsHelper.showTemporaryNavigation("Achievement Tab");
-
-    }
-
-    @Override
-    public void onAchievementClicked(Achievement achievement) {
         //mToastsHelper.showTemporaryNavigation("Achievement Tab");
+        Fragment fragment = AchievementsTabFragment.newInstance();
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        transaction.replace(R.id.tab_container, fragment);
+        transaction.commit();
     }
 
     @Override
     public void onGraphTabClicked() {
-        mToastsHelper.showTemporaryNavigation("Graph Tab");
+        //mToastsHelper.showTemporaryNavigation("Graph Tab");
+        Fragment fragment = GraphTabFragment.newInstance();
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        transaction.replace(R.id.tab_container, fragment);
+        transaction.commit();
     }
 
     @Override
     public void onLogTabClicked() {
-        mToastsHelper.showTemporaryNavigation("Log Tab");
-    }
-
-    @Override
-    public void onLogClicked(Log log) {
         //mToastsHelper.showTemporaryNavigation("Log Tab");
+        Fragment fragment = LogsTabFragment.newInstance();
+        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+        transaction.replace(R.id.tab_container, fragment);
+        transaction.commit();
     }
 
     @Override

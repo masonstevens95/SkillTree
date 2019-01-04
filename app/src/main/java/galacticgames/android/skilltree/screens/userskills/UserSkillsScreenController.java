@@ -64,8 +64,6 @@ public class UserSkillsScreenController implements UserSkillsScreenViewMvc.Liste
 
     @Override
     public void onSkillClicked(Skill skill) {
-        //TODO: mScreensNavigator.toSkillDetails(skill.getId());
-        //mToastsHelper.showTemporaryNavigation("SkillDetails, " + skill.getTitle());
         mScreensNavigator.toSkillDetails(skill.getId());
     }
 
@@ -94,7 +92,6 @@ public class UserSkillsScreenController implements UserSkillsScreenViewMvc.Liste
 
     @Override
     public boolean onHomePressed() {
-        //TODO: nav to home, pop all off stack
         mScreensNavigator.toHome();
         return false;
     }

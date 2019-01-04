@@ -14,6 +14,9 @@ import galacticgames.android.skilltree.screens.common.fragmentframehelper.Fragme
 import galacticgames.android.skilltree.screens.common.fragmentframehelper.FragmentFrameWrapper;
 import galacticgames.android.skilltree.screens.home.HomeScreenController;
 import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenController;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabController;
+import galacticgames.android.skilltree.screens.skilldetails.graphtab.GraphTabController;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.LogsTabController;
 import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenController;
 import galacticgames.android.skilltree.screens.userskills.UserSkillsScreenController;
 import galacticgames.android.skilltree.skill.FetchUserSkillsFromLocalMemory;
@@ -119,7 +122,29 @@ public class ControllerCompositionRoot {
         return new SkillDetailsScreenController(
                 getScreensNavigator(),
                 getToastsHelper(),
-                getHomePressDispatcher()
+                getHomePressDispatcher(),
+                getFragmentManager()
+        );
+    }
+
+    public AchievementsTabController getAchievementsTabController() {
+        return new AchievementsTabController(
+                getScreensNavigator(),
+                getToastsHelper()
+        );
+    }
+
+    public GraphTabController getGraphTabController() {
+        return new GraphTabController(
+                getScreensNavigator(),
+                getToastsHelper()
+        );
+    }
+
+    public LogsTabController getLogsTabController() {
+        return new LogsTabController(
+                getScreensNavigator(),
+                getToastsHelper()
         );
     }
 }

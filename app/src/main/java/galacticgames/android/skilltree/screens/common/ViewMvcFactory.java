@@ -9,8 +9,14 @@ import galacticgames.android.skilltree.screens.home.HomeScreenViewMvc;
 import galacticgames.android.skilltree.screens.home.HomeScreenViewMvcImpl;
 import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenViewMvc;
 import galacticgames.android.skilltree.screens.skilldetails.SkillDetailsScreenViewMvcImpl;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabViewMvc;
+import galacticgames.android.skilltree.screens.skilldetails.achievementstab.AchievementsTabViewMvcImpl;
 import galacticgames.android.skilltree.screens.skilldetails.achievementstab.achievementstabitem.AchievementsTabListItemViewMvc;
 import galacticgames.android.skilltree.screens.skilldetails.achievementstab.achievementstabitem.AchievementsTabListItemViewMvcImpl;
+import galacticgames.android.skilltree.screens.skilldetails.graphtab.GraphTabViewMvc;
+import galacticgames.android.skilltree.screens.skilldetails.graphtab.GraphTabViewMvcImpl;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.LogsTabViewMvc;
+import galacticgames.android.skilltree.screens.skilldetails.logstab.LogsTabViewMvcImpl;
 import galacticgames.android.skilltree.screens.skilldetails.logstab.logstabitem.LogsTabListItemViewMvc;
 import galacticgames.android.skilltree.screens.skilldetails.logstab.logstabitem.LogsTabListItemViewMvcImpl;
 import galacticgames.android.skilltree.screens.tempnewskill.NewSkillScreenViewMvc;
@@ -58,5 +64,17 @@ public class ViewMvcFactory {
 
     public SkillDetailsScreenViewMvc getSkillDetailsScreenViewMvc(@Nullable ViewGroup parent) {
         return new SkillDetailsScreenViewMvcImpl(mLayoutInflater, parent, this);
+    }
+
+    public AchievementsTabViewMvc getAchievementsTabViewMvc(ViewGroup parent) {
+        return new AchievementsTabViewMvcImpl(mLayoutInflater, parent, this);
+    }
+
+    public GraphTabViewMvc getGraphTabViewMvc(ViewGroup parent) {
+        return new GraphTabViewMvcImpl(mLayoutInflater, parent, this);
+    }
+
+    public LogsTabViewMvc getLogsTabViewMvc(ViewGroup parent) {
+        return new LogsTabViewMvcImpl(mLayoutInflater, parent, this);
     }
 }
